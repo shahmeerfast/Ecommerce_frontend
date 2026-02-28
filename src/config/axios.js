@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance with base URL
 const instance = axios.create({
-    baseURL: 'http://localhost:4000', // Remove /api from here since it's included in the route paths
+    baseURL: import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000', // Remove /api from here since it's included in the route paths
     timeout: 5000, // Request timeout in milliseconds
     headers: {
         'Content-Type': 'application/json'
